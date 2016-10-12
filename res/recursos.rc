@@ -1,0 +1,96 @@
+#include <windows.h>
+#include <commctrl.h>
+#include "recursos.h"
+
+//CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Radio Inteligente.exe.manifest"
+ID_ICONO								 ICON DISCARDABLE "rintel.ico"
+ID_ICONO_NOTIF							 ICON DISCARDABLE "rintel_notif.ico"
+
+LANGUAGE LANG_SPANISH, SUBLANG_SPANISH
+IDD_DIAG_CONFIG DIALOGEX 0, 0, 339, 203
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_VISIBLE
+CAPTION "Radio Inteligente - Configuración"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Pulsar una combinación de teclas.", 2, 214, 18, 108, 9, SS_LEFT, WS_EX_LEFT
+    CONTROL         "", ID_CONF_MACRO, HOTKEY_CLASS, WS_TABSTOP, 136, 16, 70, 12, WS_EX_LEFT
+    EDITTEXT        ID_CONF_INDICATIVO, 16, 16, 70, 12, ES_AUTOHSCROLL, WS_EX_LEFT
+    AUTOCHECKBOX    "Check", ID_A_REUNION, 14, 67, 8, 8, 0, WS_EX_LEFT
+    LTEXT           "... avisos de reuniones o 10-80 general.", 3, 28, 67, 125, 9, SS_LEFT, WS_EX_LEFT
+    GROUPBOX        "Configuración de los avisos", 4, 7, 36, 326, 142, 0, WS_EX_LEFT
+    DEFPUSHBUTTON   "Guardar\r\n", IDOK, 280, 184, 54, 14, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_SEISADAM, 14, 79, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_CODIGOCINCO, 14, 91, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_CENTRALITA, 14, 103, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_REP_UNIDADES, 14, 115, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_PROPIO, 14, 127, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_PEDIDOS, 14, 139, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_PEDIDOS_SWAT, 14, 151, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_SIN_ASIG, 14, 163, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_PANICO, 187, 67, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_APOYO, 187, 79, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_HERIDO, 187, 91, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_ROBO_COCHE, 187, 103, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_ROBO_CASA, 187, 115, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_ROBO_NEG, 187, 127, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_PAPAFOX, 187, 139, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_ROBO_BANCO, 187, 151, 8, 8, 0, WS_EX_LEFT
+    AUTOCHECKBOX    "", ID_A_CUSTODIA, 187, 163, 8, 8, 0, WS_EX_LEFT
+	AUTOCHECKBOX    "", ID_AVISOS_ACTUAL, 14, 187, 8, 8, 0, WS_EX_LEFT
+    LTEXT           "Recibir notificaciones sonoras para...", 5, 14, 50, 117, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de CÓDIGO 6-ADAM.", 6, 28, 79, 100, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de CÓDIGO 5.", 7, 28, 91, 77, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de centralita roleados.", 8, 28, 103, 100, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... pedidos de reportes de unidades.", 9, 28, 115, 114, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos a mi propia unidad o nombre.", 10, 28, 127, 122, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de pedidos generales (10-32, 10-37...)", 11, 28, 139, 150, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de pedidos para SWAT.", 12, 28, 151, 107, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de agentes sin asignación.", 13, 28, 163, 115, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de botón de pánico.", 14, 201, 67, 94, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de solicitud de apoyo (/ref)", 15, 201, 79, 115, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de herido.", 16, 201, 91, 62, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de robo de vehículo.", 17, 201, 103, 97, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de robo a vivienda. ", 18, 201, 115, 94, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de robo a negocio.", 19, 201, 127, 90, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de alarma de prisión federal.", 20, 201, 139, 119, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de robo a banco.", 21, 201, 151, 85, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de sospechosos bajo custodia.", 22, 201, 163, 128, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "Notificarme cuando haya una nueva actualización para la aplicación.", 23, 27, 187, 218, 9, SS_LEFT, WS_EX_LEFT
+    GROUPBOX        "Configuración del indicativo", 24, 7, 4, 114, 28, 0, WS_EX_LEFT
+    GROUPBOX        "Macro para desactivar el programa temporalmente", 25, 127, 4, 206, 28, 0, WS_EX_LEFT
+END
+
+VS_VERSION_INFO    VERSIONINFO
+  FILEVERSION      1,6,0,0
+  PRODUCTVERSION   1,6,0,0
+  FILEFLAGSMASK    VS_FFI_FILEFLAGSMASK
+#ifdef _DEBUG
+  FILEFLAGS        VS_FF_DEBUG | VS_FF_PRIVATEBUILD | VS_FF_PRERELEASE
+#else
+  FILEFLAGS        0x0L  // final version
+#endif
+  FILEOS           VOS_NT_WINDOWS32
+  FILETYPE         VFT_APP
+  FILESUBTYPE      VFT2_UNKNOWN // not used
+{
+  BLOCK "StringFileInfo"
+  {
+    BLOCK "040904E4" // Lang=US English, CharSet=Windows Multilingual
+    {
+      VALUE "Build",            "April 2015\0"
+      VALUE "Comments",         "Radio Inteligente\0"
+      VALUE "Developer",        "Doomer\0"
+      VALUE "FileDescription",  "Radio Inteligente\0"
+      VALUE "FileVersion",      "1.6d\0"
+      VALUE "InternalName",     "rintel\0"
+      VALUE "LegalCopyright",   "GPLv3 (C) 2015 Doomer\0"
+      VALUE "OriginalFilename", "rintel.exe\0"
+      VALUE "ProductName",      "Radio Inteligente\0"
+      VALUE "ProductVersion",   "1.6d\0"
+    }
+  }
+  BLOCK "VarFileInfo"
+  {
+	  VALUE "Translation", 0x40A, 1034 // 1252 = 0x04E4
+  } // BLOCK "VarFileInfo"
+}
