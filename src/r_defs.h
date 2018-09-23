@@ -17,8 +17,8 @@
 #pragma once
 
 #define VENTANA_GTA										"GTA:SA:MP"
-#define VERSION_SAMP									"SA-MP 0.3.7 R1"
-#define RINTEL_VERSION									"1.8.2"
+#define VERSION_SAMP									"SA-MP 0.3.7 R2"
+#define RINTEL_VERSION									"1.8.3"
 #define ARCHIVO_CONF									"rintel.cfg"
 #define WEB_DESCARGA_32BITS								"http://samp.ls-rp.es/showthread.php?103896"
 #define WEB_DESCARGA_64BITS								"http://samp.ls-rp.es/showthread.php?103896"

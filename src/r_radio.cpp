@@ -33,6 +33,7 @@ const char *servidoresPermitidos[] = {
 	"server1.ls-rp.es",
 	"server2.ls-rp.es",
 	"server3.ls-rp.es",
+	"practicas.ls-rp.es",
 
 	NULL
 };
@@ -170,11 +171,11 @@ const char *PC_REP_UNIDADES_PROHIB[] = {
 
 const char *PC_PEDIDOS_SWAT[] = {
 
-	"codigo tac", "se requiere swat", "solicita swat",
-	"solicitamos swat", "solicitando swat", "necesito swat",
-	"necesitamos swat", "necesita swat", "solicito swat",
-	"requiere swat", "requerimos swat", "requiriendo swat",
-	"requiero swat", "unidades swat", "unidades david",
+	"codigo 77", "codigo seteta y siete", "se requiere metro", "solicita metro",
+	"solicitamos metro", "solicitando metro", "necesito metro",
+	"necesitamos metro", "necesita metro", "solicito metro",
+	"requiere metro", "requerimos metro", "requiriendo metro",
+	"requiero metro", "unidades metro", "unidades david",
 
 	NULL
 };

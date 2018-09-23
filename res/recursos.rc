@@ -44,7 +44,7 @@ BEGIN
 	LTEXT           "... pedidos de reportes de unidades.", 9, 28, 115, 114, 9, SS_LEFT, WS_EX_LEFT
 	LTEXT           "... avisos a mi propia unidad o nombre.", 10, 28, 127, 122, 9, SS_LEFT, WS_EX_LEFT
 	LTEXT           "... avisos de pedidos generales (10-32, 10-37...)", 11, 28, 139, 150, 9, SS_LEFT, WS_EX_LEFT
-	LTEXT           "... avisos de pedidos para SWAT.", 12, 28, 151, 107, 9, SS_LEFT, WS_EX_LEFT
+	LTEXT           "... avisos de pedidos para METRO.", 12, 28, 151, 120, 9, SS_LEFT, WS_EX_LEFT
 	LTEXT           "... avisos de agentes sin asignación.", 13, 28, 163, 115, 9, SS_LEFT, WS_EX_LEFT
 	LTEXT           "... avisos de botón de pánico.", 14, 201, 67, 94, 9, SS_LEFT, WS_EX_LEFT
 	LTEXT           "... avisos de solicitud de apoyo (/ref)", 15, 201, 79, 115, 9, SS_LEFT, WS_EX_LEFT
@@ -61,8 +61,8 @@ BEGIN
 END
 
 VS_VERSION_INFO    VERSIONINFO
-  FILEVERSION      1,6,0,0
-  PRODUCTVERSION   1,6,0,0
+  FILEVERSION      1,6,1,0
+  PRODUCTVERSION   1,6,1,0
   FILEFLAGSMASK    VS_FFI_FILEFLAGSMASK
 #ifdef _DEBUG
   FILEFLAGS        VS_FF_DEBUG | VS_FF_PRIVATEBUILD | VS_FF_PRERELEASE
