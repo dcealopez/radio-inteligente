@@ -27,13 +27,13 @@
 // Definiciones de las direcciones de memoria de SAMP
 
 #define DIR_NULA                                        0x0
-#define DIR_NOMBRE_JUGADOR_SAMP                         0x219A6F
-#define DIR_INFO_SAMP_CHAT                              0x21A0E4
-#define DIR_INFO_SAMP                                   0x21A0F8
-#define DIR_INFO_SAMP_PPOOL								0x3CD
-#define DIR_INFO_SAMP_PPOOL_LOCAL						0x18
-#define DIR_INFO_SAMP_IP_OFF                            0x20
-#define DIR_INFO_SAMP_ID_JUG_OFF						0x4
+#define DIR_NOMBRE_JUGADOR_SAMP                         0x219A77
+#define DIR_INFO_SAMP_CHAT                              0x21A0EC
+#define DIR_INFO_SAMP                                   0x21A100
+#define DIR_INFO_SAMP_PPOOL								0x3C5
+#define DIR_INFO_SAMP_PPOOL_LOCAL						0x8
+#define DIR_INFO_SAMP_IP_OFF                            0x1C
+#define DIR_INFO_SAMP_ID_JUG_OFF						0x0
 
 void eliminarCodigosColores(const char *mensaje, char *destino);
 void eliminarMarcaHora(const char *mensaje, char *destino);
