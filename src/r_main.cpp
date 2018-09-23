@@ -705,7 +705,7 @@ void analizarMensajes() {
 	Primero analizaremos todos los mensajes de radio, es decir, aquellos que
 	empiecen con "**[" */
 
-	if(strstr(mensajeCompleto, "**[id: ") != NULL || strstr(mensajeCompleto, "**[rj ") != NULL || strstr(mensajeCompleto, ", c: ") != NULL)
+	if (strstr(mensajeCompleto, "**[id: ") != NULL || strstr(mensajeCompleto, "**[rj ") != NULL || strstr(mensajeCompleto, ", c: ") != NULL || strstr(mensajeCompleto, "[radio id: ") != NULL || strstr(mensajeCompleto, "| ch: ") != NULL)
 	{
 		// Avisos de reunión general (10-80)
 		if(radioInteligente.obtenerValorAviso(A_REUNION_GENERAL))
@@ -815,13 +815,8 @@ void analizarMensajes() {
 
 				if(wcsstr(radioInteligente.obtenerNombreIndicativo(), L"DAVID") != NULL ||
 					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"LINCOLN") != NULL ||
-					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"WHISKEY") != NULL ||
-					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"QUEEN") != NULL ||
-					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"OMEGA") != NULL ||
-					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"-S") != NULL ||
-					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"-L") != NULL ||
-					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"-C") != NULL ||
-					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"TOM") != NULL ||
+					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"ADAM") != NULL ||
+					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"ROBERT") != NULL ||
 					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"K9") != NULL)
 				{
 					reproducirSonido(archivosDeSonido[S_CODIGO_TAC]);
