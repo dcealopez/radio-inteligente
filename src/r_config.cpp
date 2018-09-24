@@ -126,7 +126,7 @@ INT_PTR CALLBACK VentanaConfiguracion(HWND hwndConf, UINT mensaje, WPARAM wParam
 						MessageBeep(MB_ICONERROR);
 						MessageBox(hwndConf, _T("El campo del indicativo de la unidad está vacío o tiene un formato incorrecto.")
 							_T(" Recuerde que el campo debe contener el indicativo completo de la unidad.\n\n")
-							_T("Ejemplo: TANGO-1."),
+							_T("Ejemplo: ADAM-1."),
 							_T("Error"), MB_OK | MB_ICONEXCLAMATION);
 						break;
 					}

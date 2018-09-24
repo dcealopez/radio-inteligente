@@ -734,6 +734,13 @@ void analizarMensajes() {
 				return;
 			}
 		}
+		// Avisos de código cuatro
+		if (strstr(mensajeCompleto, "codigo cuatro") != NULL || strstr(mensajeCompleto, "codigo 4") != NULL)
+		{
+			Sleep(250);
+			reproducirSonido(archivosDeSonido[S_CODIGO_CUATRO]);
+			return;
+		}
 		// Avisos roleados de centralita
 		if(radioInteligente.obtenerValorAviso(A_CENTRALITA))
 		{
@@ -810,8 +817,7 @@ void analizarMensajes() {
 		{
 			if(contieneMensajePalabras(mensajeCompleto, PC_PEDIDOS_SWAT))
 			{
-				/* Sólo enviamos esta notificación a oficiales patrullando en unidades
-				   SWAT y a las unidades supervisoras */
+				/* Notificamos a las posibles unidades metro activas. */
 
 				if(wcsstr(radioInteligente.obtenerNombreIndicativo(), L"DAVID") != NULL ||
 					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"LINCOLN") != NULL ||
@@ -874,7 +880,7 @@ void analizarMensajes() {
 				}
 				if(strstr(mensajeCompleto, "custodia") != NULL || strstr(mensajeCompleto, "bajo custodia") != NULL || strstr(mensajeCompleto, "en custodia") != NULL)
 				{
-					Sleep(1000);
+					Sleep(250);
 					reproducirSonido(archivosDeSonido[sonidoAleatorio]);
 					return;
 				}
@@ -888,7 +894,7 @@ void analizarMensajes() {
 				}
 				if(strstr(mensajeCompleto, "custodia") != NULL || strstr(mensajeCompleto, "bajo custodia") != NULL || strstr(mensajeCompleto, "en custodia") != NULL)
 				{
-					Sleep(1000);
+					Sleep(250);
 					reproducirSonido(archivosDeSonido[S_CUSTODIA]);
 					return;
 				}
@@ -1013,7 +1019,7 @@ void analizarMensajes() {
 	// Avisos de robo al banco
 	if(radioInteligente.obtenerValorAviso(A_ROBO_BANCO))
 	{
-		if(strstr(mensajeCompleto, "[centralita]") != NULL && strstr(mensajeCompleto, "banco de rodeo") != NULL)
+		if(strstr(mensajeCompleto, "[centralita]") != NULL && strstr(mensajeCompleto, "banco de temple") != NULL)
 		{
 			reproducirSonido(archivosDeSonido[S_ROBO_BANCO]);
 			return;

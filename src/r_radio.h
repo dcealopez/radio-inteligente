@@ -80,6 +80,7 @@ typedef enum {
     S_ROBO_DOS,
     S_ROBO_TRES,
     S_ROBO_CUATRO,
+	S_CODIGO_CUATRO,
 
     NUM_SONIDOS // Número total de sonidos
 } l_sonidos;
