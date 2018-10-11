@@ -707,6 +707,11 @@ void analizarMensajes() {
 
 	if (strstr(mensajeCompleto, "**[id: ") != NULL || strstr(mensajeCompleto, "**[rj ") != NULL || strstr(mensajeCompleto, ", c: ") != NULL || strstr(mensajeCompleto, "[radio id: ") != NULL || strstr(mensajeCompleto, "| ch: ") != NULL)
 	{
+		if (strstr(mensajeCompleto, "**[rj ") != NULL)
+		{
+			reproducirSonido(archivosDeSonido[S_IMPORTANTE]);
+			return;
+		}
 		// Avisos de reunión general (10-80)
 		if(radioInteligente.obtenerValorAviso(A_REUNION_GENERAL))
 		{

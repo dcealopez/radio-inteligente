@@ -85,7 +85,7 @@ INT_PTR CALLBACK VentanaConfiguracion(HWND hwndConf, UINT mensaje, WPARAM wParam
 	{
 		case WM_INITDIALOG:
 			// Cargamos la configuración y la mostramos en el dialogo
-			SetWindowText(GetDlgItem(hwndConf, ID_CONF_INDICATIVO), _T("Ej: TANGO-1"));
+			SetWindowText(GetDlgItem(hwndConf, ID_CONF_INDICATIVO), _T("Ej: ADAM-1"));
 			if(wcscmp(radioInteligente.obtenerNombreIndicativo(), _T("N/A")))
 				SetWindowText(GetDlgItem(hwndConf, ID_CONF_INDICATIVO), radioInteligente.obtenerNombreIndicativo());
 			CheckDlgButton(hwndConf, ID_A_REUNION, radioInteligente.obtenerValorAviso(A_REUNION_GENERAL));
