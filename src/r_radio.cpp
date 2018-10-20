@@ -73,7 +73,8 @@ const wchar_t *archivosDeSonido[] = {
     L"robo1.wav", // S_ROBO_UNO
     L"robo2.wav", // S_ROBO_DOS
     L"robo3.wav", // S_ROBO_TRES
-    L"robo4.wav" // S_ROBO_CUATRO
+    L"robo4.wav", // S_ROBO_CUATRO
+	L"codigo4.wav" //S_CODIGO_CUATRO
 };
 
 // Entradas de configuración para los avisos, enlazados con el enumerador
@@ -155,7 +156,8 @@ const char *PC_REP_UNIDADES[] = {
 
 	"reporten", "asignaciones", "componen",
 	"miembros", "reportense", "reportar",
-	"unidades activas", "actuales",
+	"unidades activas", "actuales", "codigo 6 charles",
+	"6-charles", "seis charles", "6 charles", "86 forzoso",
 
 	NULL
 };
