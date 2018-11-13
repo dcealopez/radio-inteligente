@@ -119,8 +119,8 @@ const char *PC_PROHIBIDAS_GENERAL[] = {
 
 const char *PC_REUNION_GENERAL[] = {
 
-	"1080 general", "'80 general", "80' general",
-	"sala de asignaciones", "10-80 general", "80 general",
+	"1080 general en", "'80 general en", "80' general en",
+	"sala de asignaciones", "10-80 general en", "80 general en",
 
 	NULL
 };
@@ -146,7 +146,7 @@ const char *PC_CENTRALITA[] = {
 	"[central]", "[centralita]", "[despacho]",
 	"[dispatch]", "central:", "-central-",
 	"-despacho-", "despacho:", "-centralita-",
-	"-dispatch-", "dispatch",
+	"-dispatch-", "[dispatch]",
 
 	NULL
 };
