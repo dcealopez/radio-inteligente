@@ -85,7 +85,7 @@ INT_PTR CALLBACK VentanaConfiguracion(HWND hwndConf, UINT mensaje, WPARAM wParam
 	{
 		case WM_INITDIALOG:
 			// Cargamos la configuración y la mostramos en el dialogo
-			SetWindowText(GetDlgItem(hwndConf, ID_CONF_INDICATIVO), _T("Ej: ADAM-1"));
+			SetWindowText(GetDlgItem(hwndConf, ID_CONF_INDICATIVO), _T("Ej: ADAM-15"));
 			if(wcscmp(radioInteligente.obtenerNombreIndicativo(), _T("N/A")))
 				SetWindowText(GetDlgItem(hwndConf, ID_CONF_INDICATIVO), radioInteligente.obtenerNombreIndicativo());
 			CheckDlgButton(hwndConf, ID_A_REUNION, radioInteligente.obtenerValorAviso(A_REUNION_GENERAL));
@@ -126,7 +126,7 @@ INT_PTR CALLBACK VentanaConfiguracion(HWND hwndConf, UINT mensaje, WPARAM wParam
 						MessageBeep(MB_ICONERROR);
 						MessageBox(hwndConf, _T("El campo del indicativo de la unidad está vacío o tiene un formato incorrecto.")
 							_T(" Recuerde que el campo debe contener el indicativo completo de la unidad.\n\n")
-							_T("Ejemplo: ADAM-1."),
+							_T("Ejemplo: ADAM-15."),
 							_T("Error"), MB_OK | MB_ICONEXCLAMATION);
 						break;
 					}

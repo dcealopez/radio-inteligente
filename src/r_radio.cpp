@@ -73,8 +73,7 @@ const wchar_t *archivosDeSonido[] = {
     L"robo1.wav", // S_ROBO_UNO
     L"robo2.wav", // S_ROBO_DOS
     L"robo3.wav", // S_ROBO_TRES
-    L"robo4.wav", // S_ROBO_CUATRO
-	L"codigo4.wav" //S_CODIGO_CUATRO
+    L"robo4.wav" // S_ROBO_CUATRO
 };
 
 // Entradas de configuración para los avisos, enlazados con el enumerador
@@ -120,8 +119,8 @@ const char *PC_PROHIBIDAS_GENERAL[] = {
 
 const char *PC_REUNION_GENERAL[] = {
 
-	"1080 general", "'80 general", "80' general",
-	"sala de asignaciones", "10-80 general", "80 general",
+	"1080 general en", "'80 general en", "80' general en",
+	"sala de asignaciones", "10-80 general en", "80 general en",
 
 	NULL
 };
@@ -147,7 +146,7 @@ const char *PC_CENTRALITA[] = {
 	"[central]", "[centralita]", "[despacho]",
 	"[dispatch]", "central:", "-central-",
 	"-despacho-", "despacho:", "-centralita-",
-	"-dispatch-", "dispatch",
+	"-dispatch-", "[dispatch]",
 
 	NULL
 };
@@ -156,8 +155,7 @@ const char *PC_REP_UNIDADES[] = {
 
 	"reporten", "asignaciones", "componen",
 	"miembros", "reportense", "reportar",
-	"unidades activas", "actuales", "codigo 6 charles",
-	"6-charles", "seis charles", "6 charles", "86 forzoso",
+	"unidades activas", "actuales",
 
 	NULL
 };

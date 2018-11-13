@@ -710,7 +710,7 @@ void analizarMensajes() {
 		if (strstr(mensajeCompleto, "**[rj ") != NULL)
 		{
 			reproducirSonido(archivosDeSonido[S_IMPORTANTE]);
-			return;
+			Sleep(300);
 		}
 		// Avisos de reunión general (10-80)
 		if(radioInteligente.obtenerValorAviso(A_REUNION_GENERAL))
@@ -738,13 +738,6 @@ void analizarMensajes() {
 				reproducirSonido(archivosDeSonido[S_IMPORTANTE]);
 				return;
 			}
-		}
-		// Avisos de código cuatro
-		if (strstr(mensajeCompleto, "codigo cuatro") != NULL || strstr(mensajeCompleto, "codigo 4") != NULL)
-		{
-			Sleep(250);
-			reproducirSonido(archivosDeSonido[S_CODIGO_CUATRO]);
-			return;
 		}
 		// Avisos roleados de centralita
 		if(radioInteligente.obtenerValorAviso(A_CENTRALITA))
@@ -822,7 +815,8 @@ void analizarMensajes() {
 		{
 			if(contieneMensajePalabras(mensajeCompleto, PC_PEDIDOS_SWAT))
 			{
-				/* Notificamos a las posibles unidades metro activas. */
+				/* Sólo enviamos esta notificación a oficiales patrullando en unidades
+				   SWAT y a las unidades supervisoras */
 
 				if(wcsstr(radioInteligente.obtenerNombreIndicativo(), L"DAVID") != NULL ||
 					wcsstr(radioInteligente.obtenerNombreIndicativo(), L"LINCOLN") != NULL ||
@@ -885,7 +879,7 @@ void analizarMensajes() {
 				}
 				if(strstr(mensajeCompleto, "custodia") != NULL || strstr(mensajeCompleto, "bajo custodia") != NULL || strstr(mensajeCompleto, "en custodia") != NULL)
 				{
-					Sleep(250);
+					Sleep(1000);
 					reproducirSonido(archivosDeSonido[sonidoAleatorio]);
 					return;
 				}
@@ -899,7 +893,7 @@ void analizarMensajes() {
 				}
 				if(strstr(mensajeCompleto, "custodia") != NULL || strstr(mensajeCompleto, "bajo custodia") != NULL || strstr(mensajeCompleto, "en custodia") != NULL)
 				{
-					Sleep(250);
+					Sleep(1000);
 					reproducirSonido(archivosDeSonido[S_CUSTODIA]);
 					return;
 				}
@@ -1024,7 +1018,7 @@ void analizarMensajes() {
 	// Avisos de robo al banco
 	if(radioInteligente.obtenerValorAviso(A_ROBO_BANCO))
 	{
-		if(strstr(mensajeCompleto, "[centralita]") != NULL && strstr(mensajeCompleto, "banco de temple") != NULL)
+		if(strstr(mensajeCompleto, "[centralita]") != NULL && strstr(mensajeCompleto, "banco de rodeo") != NULL)
 		{
 			reproducirSonido(archivosDeSonido[S_ROBO_BANCO]);
 			return;
